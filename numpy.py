@@ -23,14 +23,14 @@ plt.legend()
 #%%
 import matplotlib.pyplot as plt
 
- a = np.array(10_000).reshape(100,100)
- plt.imshow(M)
+a = np.array(10_000).reshape(100,100)
+plt.imshow(M)
  
  #%%
  #Narysuj za pomoca funkcji imshow wartosci funkcjonału F(x,y) = X^2 + (-y - pierwiastek z trzech x^2)^2 = 1
 
- def M(x,y):
-     return x**2 + (-y - (x**2) ** (1/3)) ** 2 - 1
+def M(x,y):
+    return x**2 + (-y - (x**2) ** (1/3)) ** 2 - 1
  
 # M = np.zeros(shape=(100,100))
 # for i in range(100):

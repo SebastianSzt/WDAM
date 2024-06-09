@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Apr  4 10:06:15 2024
-
-@author: pk
-"""
-
 #orange biolab
 
 import numpy as np
@@ -59,10 +53,3 @@ for i, (train_index, test_index) in enumerate(kf.split(X)):
      acc_score = metrics.accuracy_score(y_test, y_pred)
      print("ACC = %f" % acc_score)
      print(metrics.classification_report(y_test, y_pred))
-     
-     
-     
-     
-     
-     
-     

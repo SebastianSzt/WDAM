@@ -90,7 +90,6 @@ plt.axvline(0.7 * w, c = 'r')
 plt.legend()
 
 #%%
-#Dla każdego obrazka C zamienić go na wektor 2 liczb hue w srodku i hue na zewnątrz
 def segment_img():
     I = io.imread("coins/test1.jpg")
     I = I.astype(float) / 255

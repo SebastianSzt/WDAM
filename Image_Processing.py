@@ -57,5 +57,3 @@ plt.figure(); plt.hist(I.flatten(), bins = 100)
 I = exposure.equalize_adapthist(I)
 plt.figure();
 plt.imshow(I, cmap='gray')
-
-

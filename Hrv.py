@@ -91,5 +91,3 @@ I = A*xx**2 + B*xx*yy + C*yy**2 + D*xx + E*yy + F
 
 
 plt.imshow(I, cmap='jet')
-
-##W przyszlym tygodniu zajecia zdalne o projektach za dwa tygodnie prezentacja projektow w piątek 21.06 o 10:00
