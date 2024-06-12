@@ -56,7 +56,7 @@ def recommend_movies(selected_movies, num_recommendations, cosine_sim=cosine_sim
     '''
     # Sprawdzenie kształtu wybranych wektorów cech
     for idx in selected_indices:
-        print(f"IndexTest: {idx}, Feature vector shape: {cosine_sim[idx].shape}")
+        print(f"Index: {idx}, Feature vector shape: {cosine_sim[idx].shape}")
     '''
     
     # Obliczenie średniego podobieństwa do wybranych filmów
