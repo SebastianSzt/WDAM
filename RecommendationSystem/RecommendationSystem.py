@@ -68,7 +68,7 @@ def recommend_movies(selected_movies, num_recommendations, cosine_sim=cosine_sim
     
     # Pobranie indeksów najbardziej podobnych filmów, pomijając wybrane filmy
     movie_indices = [i[0] for i in sim_scores if i[0] not in selected_indices]
-    recommended_movies = data['name'].iloc[movie_indices].head(num_recommendations)
+    recommended_movies = data[['name', 'year']].iloc[movie_indices].head(num_recommendations)
     
     return recommended_movies
 
@@ -104,5 +104,5 @@ num_recommendations = int(input("Ile rekomendacji chcesz otrzymać? (podaj liczb
 
 recommended_movies = recommend_movies(selected_movies, num_recommendations)
 print("\nRekomendowane filmy:")
-for movie in recommended_movies:
-    print(movie)
+for idx, movie in recommended_movies.iterrows():
+    print(f"{movie['name']} ({movie['year']})")
