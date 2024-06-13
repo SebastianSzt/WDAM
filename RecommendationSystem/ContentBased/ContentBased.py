@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 import re
 
 
-# data = pd.read_csv('RecommendationSystem/imdb.csv')
+# data = pd.read_csv('RecommendationSystem/ContentBased/imdb.csv')
 # data[['Title', 'Genre', 'Description', 'Director', 'Actors']] = data[['Title', 'Genre', 'Description', 'Director', 'Actors']].fillna('')
 # data[['Rank', 'Year', 'Runtime (Minutes)', 'Rating', 'Votes', 'Revenue (Millions)', 'Metascore']] = data[['Rank', 'Year', 'Runtime (Minutes)', 'Rating', 'Votes', 'Revenue (Millions)', 'Metascore']].fillna(0)
 # data['features'] = (data['Title'] + ' ' + data['Genre'] + ' ' + data['Description'] + ' ' + data['Director'] + ' ' + data['Actors'])
@@ -15,7 +15,7 @@ import re
 
 # Dane ze strony https://www.kaggle.com/datasets/danielgrijalvas/movies
 # Wczytanie danych z pliku CSV
-data = pd.read_csv('RecommendationSystem/movies.csv')
+data = pd.read_csv('RecommendationSystem/ContentBased/movies.csv')
 
 # Usunięcie informacji o kraju z kolumny 'year'
 data['year'] = data['year'].apply(lambda x: re.sub(r' \((.*?)\)', '', str(x)))
