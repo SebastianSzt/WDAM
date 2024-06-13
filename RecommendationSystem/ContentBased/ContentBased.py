@@ -81,7 +81,10 @@ while True:
     
     if not matching_movies.empty:
         if len(matching_movies) == 1:
-            selected_movies.append((matching_movies.iloc[0]['name'], matching_movies.iloc[0]['year']))
+            if (matching_movies.iloc[0]['name'], matching_movies.iloc[0]['year']) in selected_movies:
+                print("Już podałeś ten film. Spróbuj podać inny.")
+            else:
+                selected_movies.append((matching_movies.iloc[0]['name'], matching_movies.iloc[0]['year']))
         else:
             print("Znaleziono kilka filmów o tym tytule:")
             for i, row in matching_movies.iterrows():
@@ -89,7 +92,10 @@ while True:
             year = input("Podaj rok wydania filmu: ")
             matching_movie = matching_movies[matching_movies['year'] == year]
             if not matching_movie.empty:
-                selected_movies.append((matching_movie.iloc[0]['name'], matching_movie.iloc[0]['year']))
+                if (matching_movie.iloc[0]['name'], matching_movie.iloc[0]['year']) in selected_movies:
+                    print("Już podałeś ten film. Spróbuj podać inny.")
+                else:
+                    selected_movies.append((matching_movie.iloc[0]['name'], matching_movie.iloc[0]['year']))
             else:
                 print("Nie znaleziono filmu o takim tytule i roku. Spróbuj ponownie.")
     else:
