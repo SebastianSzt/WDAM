@@ -108,6 +108,5 @@ def recommend_movies(user_ratings, n_recommendations=5):
 
 recommended_movies = recommend_movies(user_ratings, num_recommendations)
 print("\nRekomendowane filmy:")
-# print(recommended_movies) # Wyświetlenie pełnych danych
-print("\n".join(recommended_movies['title']))
-print("\n")
+# print(recommended_movies, "\n") # Wyświetlenie pełnych danych
+print("\n".join(recommended_movies['title']), "\n")
